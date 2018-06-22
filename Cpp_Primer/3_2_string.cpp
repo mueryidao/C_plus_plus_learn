@@ -24,6 +24,7 @@ using namespace std;
 
 int main()
 {
+    string line;
 #if 0
     int v1=0, v2=0;
     std::cin >> v1 >> v2;
@@ -36,13 +37,15 @@ int main()
     std::cout << "*/";
     std::cout << /* "*/" */";
     std::cout << /* "*/" /* "/*" */;
-#endif
-
-    string line;
 
     while(getline(cin, line)) {
         if (line.size() > 80)
             std::cout << line << std::endl;
+    }
+#endif
+
+    while (cin >> line) {
+        cout << line << endl;
     }
     return 0;
 }
