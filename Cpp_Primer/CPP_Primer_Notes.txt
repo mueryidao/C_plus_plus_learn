@@ -1,0 +1,12 @@
+
+要存放常量对象的地址，只能使用指向常量的指针。
+const double pi = 3.14;
+double *ptr = &pi; //错误！ptr是普通指针！
+const double *cptr = &pi; //正确！
+
+允许令一个指向常量的指针指向非常量对象
+const double *cptr = &pi; //正确！
+double dval = 3.14;
+cptr= &dval;
+
+默认情况下，this的类型是指向类类型非常量版本的常量指针。
